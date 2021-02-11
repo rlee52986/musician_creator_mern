@@ -1,25 +1,20 @@
-import logo from './logo.svg';
+import { Component } from 'react';
+import Navigation from './UIComponents/NavbarComponent';
+import MusicianForm from './UIComponents/FormComponent';
+import { Button } from 'reactstrap';
 import './App.css';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+class App extends Component {
+  render() {
+    return (
+      <div className="container">        
+        <Navigation />
+        <MusicianForm />
+        <Button id="create" style={{width: '15%'}}>Create</Button>{' '}
+        <Button id="delete" style={{width: '15%'}}>Delete</Button>
+      </div>
+    )
+  }
 }
 
 export default App;
